@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./vendor/normalize.css?v=1" />
+    <link rel="stylesheet" href="./styles/styles.css?v=3" />
+    <title>BOT</title>
+  </head>
+  <body class="body">
+    <!--  <div class="header">
+      <div style="color: white; font-size: 16px">Инвестиционный портал города Москвы</div>
+    </div> -->
+
+    <div class="main-content">
+      <div class="close-fullscreen-button" id="close-fullscreen-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <rect width="30" height="30" rx="4" fill="white" fill-opacity="0.2" />
+          <path d="M20 10L10 20M20 20L10 10" stroke="white" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <img src="./img/AI_Robot_02_3d 1.png" alt="Robot" class="robot-image" />
+
+      <div class="chat-container">
+        <div class="dialog-history" id="dialog-history">
+          <!-- Dialog history will be populated here -->
+        </div>
+        <div class="chat-container-background">
+          <div class="tabs">
+            <div class="tab">Площадки</div>
+            <div class="tab">Меры поддержки</div>
+            <div class="tab inactive">Услуги</div>
+          </div>
+         
+
+          <div class="input-container">
+            <div class="input-field">
+              <input type="text" id="user-input" placeholder="Введите запрос..." />
+              <div class="send-btn" onclick="sendMessage()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M15.0583 7.09153L7.92498 3.52487C3.13331 1.12487 1.16664 3.09153 3.56664 7.8832L4.29164 9.3332C4.49998 9.7582 4.49998 10.2499 4.29164 10.6749L3.56664 12.1165C1.16664 16.9082 3.12498 18.8749 7.92498 16.4749L15.0583 12.9082C18.2583 11.3082 18.2583 8.69154 15.0583 7.09153ZM12.3666 10.6249H7.86664C7.52498 10.6249 7.24164 10.3415 7.24164 9.99987C7.24164 9.6582 7.52498 9.37487 7.86664 9.37487H12.3666C12.7083 9.37487 12.9916 9.6582 12.9916 9.99987C12.9916 10.3415 12.7083 10.6249 12.3666 10.6249Z"
+                    fill="#292D32"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="microphone" onclick="sendMessage()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M8.99976 2.46799C7.79739 2.46799 6.82267 3.4427 6.82267 4.64507V8.27355C6.82267 9.47592 7.79739 10.4506 8.99976 10.4506C10.2021 10.4506 11.1768 9.47592 11.1768 8.27355V4.64507C11.1768 3.4427 10.2021 2.46799 8.99976 2.46799ZM9.72545 14.7649V15.8933C9.72545 16.2941 9.40055 16.619 8.99976 16.619C8.59897 16.619 8.27406 16.2941 8.27406 15.8933V14.7649C5.00847 14.4039 2.46851 11.6354 2.46851 8.27355C2.46851 7.87276 2.79341 7.54785 3.1942 7.54785C3.59499 7.54785 3.91989 7.87276 3.91989 8.27355C3.91989 11.0791 6.19423 13.3534 8.99976 13.3534C11.8053 13.3534 14.0796 11.0791 14.0796 8.27355C14.0796 7.87276 14.4045 7.54785 14.8053 7.54785C15.2061 7.54785 15.531 7.87276 15.531 8.27355C15.531 11.6354 12.991 14.4039 9.72545 14.7649ZM8.99976 1.0166C11.0037 1.0166 12.6282 2.64112 12.6282 4.64507V8.27355C12.6282 10.2775 11.0037 11.902 8.99976 11.902C6.99581 11.902 5.37128 10.2775 5.37128 8.27355V4.64507C5.37128 2.64112 6.99581 1.0166 8.99976 1.0166Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div
+            class="button"
+            id="business-solution-button"
+            onclick="sendPresetMessage('Подобрать решение для бизнеса')"
+          >
+            Подобрать решение для бизнеса
+          </div>
+          <div class="button" onclick="sendPresetMessage('Решить проблему')">Решить проблему</div>
+          <div class="button" onclick="sendPresetMessage('Получить консультацию')">Получить консультацию</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="iframe-container">
+      <iframe src="https://investmoscow.ru/" width="100%" height="99%" style="border: none"></iframe>
+    </div>
+
+    <script src="./scripts/scripts.js?v=9"></script>
+  </body>
+</html>
